@@ -71,7 +71,8 @@ graph TD
 
 ## 5. Graph Data Model
 
-```mermaid
+<img width="903" height="866" alt="Screenshot 2026-08-28 195834" src="https://github.com/user-attachments/assets/1ecf11d6-d4cc-4537-bb35-1634a316d24b" />
+
 graph LR
     Candidate["Candidate<br/>• id, name, email<br/>• experience_years<br/>• location, bio"]
     Skill1["Skill<br/>• id, name<br/>• category, level"]
@@ -452,9 +453,8 @@ python -m pytest tests/ -v
 
 ## 18. Live Demo
 
-- **Hosted Demo URL**: `https://<your-deployed-app-url>.vercel.app` *(Optional/Encouraged)*
-- **Screen Recording**: *(Place recording link here)*
-
+- **Hosted Demo URL**: `https://skillgraph-wexa-ai.vercel.app/`
+- **Screen Recording**: *https://drive.google.com/file/d/1OKqsQAq2Hp9kUl6Pf-qNc4L37igCsb9Y/view?usp=sharing*
 ---
 
 ## 19. UI Screenshots
@@ -465,6 +465,7 @@ python -m pytest tests/ -v
 2. **Candidate Profile & Match Breakdown**: Selected candidate with calculated match percentages and skill gap visualization.
 3. **Multi-Hop Skill Bridges**: Visual path linking existing skills to required job competencies.
 4. **Skill Demand & Traversal**: Market demand bar charts and interactive related-skills tree.
+<img width="1618" height="872" alt="Screenshot 2026-08-28 203559" src="https://github.com/user-attachments/assets/23042e96-20da-40ef-ad88-eb6eefc7b3ac" />
 
 ---
 
