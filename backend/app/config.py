@@ -1,6 +1,21 @@
 """Application configuration loaded from environment variables."""
-from pydantic_settings import BaseSettings
+import os
+from pathlib import Path
 from functools import lru_cache
+from dotenv import load_dotenv
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+# Robustly find and load .env from current directory, backend directory, or project root
+_backend_dir = Path(__file__).resolve().parent.parent
+_root_dir = _backend_dir.parent
+for env_path in [
+    Path.cwd() / ".env",
+    _backend_dir / ".env",
+    _root_dir / ".env",
+]:
+    if env_path.exists():
+        load_dotenv(dotenv_path=env_path, override=True)
+        break
 
 
 class Settings(BaseSettings):
@@ -23,13 +38,16 @@ class Settings(BaseSettings):
     def cors_origins_list(self) -> list[str]:
         return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
 
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
-        case_sensitive = False
+    model_config = SettingsConfigDict(
+        env_file=(".env", "../.env"),
+        env_file_encoding="utf-8",
+        case_sensitive=False,
+        extra="ignore",
+    )
 
 
 @lru_cache()
 def get_settings() -> Settings:
     """Return cached settings instance."""
     return Settings()
+
