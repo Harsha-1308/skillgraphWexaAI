@@ -71,7 +71,7 @@ graph TD
 
 ## 5. Graph Data Model
 
-```<img width="903" height="866" alt="Screenshot 2026-08-28 195834" src="https://github.com/user-attachments/assets/1ecf11d6-d4cc-4537-bb35-1634a316d24b" />
+```
 
 graph LR
     Candidate["Candidate<br/>• id, name, email<br/>• experience_years<br/>• location, bio"]
@@ -90,7 +90,7 @@ graph LR
     Job -->|LOCATED_IN| Location
     Company -->|LOCATED_IN| Location
 ```
-
+<img width="903" height="866" alt="Screenshot 2026-08-28 195834" src="https://github.com/user-attachments/assets/1ecf11d6-d4cc-4537-bb35-1634a316d24b" />
 ### Node Types & Key Properties
 - **`Candidate`**: `id`, `name`, `email`, `experience_years`, `location`, `bio`
 - **`Skill`**: `id`, `name`, `category` (e.g. `Programming`, `AI/ML`, `DevOps`), `level`
