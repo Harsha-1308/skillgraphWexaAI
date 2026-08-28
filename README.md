@@ -71,7 +71,7 @@ graph TD
 
 ## 5. Graph Data Model
 
-<img width="903" height="866" alt="Screenshot 2026-08-28 195834" src="https://github.com/user-attachments/assets/1ecf11d6-d4cc-4537-bb35-1634a316d24b" />
+```<img width="903" height="866" alt="Screenshot 2026-08-28 195834" src="https://github.com/user-attachments/assets/1ecf11d6-d4cc-4537-bb35-1634a316d24b" />
 
 graph LR
     Candidate["Candidate<br/>• id, name, email<br/>• experience_years<br/>• location, bio"]
@@ -459,13 +459,14 @@ python -m pytest tests/ -v
 
 ## 19. UI Screenshots
 
-*(Screenshots can be captured when running locally or against your deployed instance and saved in `docs/screenshots/`)*
-
 1. **Dashboard View**: Platform overview, total stats, top demanded skills, and candidate list.
 2. **Candidate Profile & Match Breakdown**: Selected candidate with calculated match percentages and skill gap visualization.
 3. **Multi-Hop Skill Bridges**: Visual path linking existing skills to required job competencies.
 4. **Skill Demand & Traversal**: Market demand bar charts and interactive related-skills tree.
 <img width="1618" height="872" alt="Screenshot 2026-08-28 203559" src="https://github.com/user-attachments/assets/23042e96-20da-40ef-ad88-eb6eefc7b3ac" />
+<img width="1588" height="902" alt="Screenshot 2026-08-29 002821" src="https://github.com/user-attachments/assets/c16ff7b4-36c6-4f53-86b2-f321c904b39b" />
+<img width="1565" height="831" alt="Screenshot 2026-08-29 002842" src="https://github.com/user-attachments/assets/191e90c7-5cdb-4f3d-a368-26b0b5ccfa92" />
+<img width="1540" height="700" alt="Screenshot 2026-08-29 002908" src="https://github.com/user-attachments/assets/ab1e83b7-1d2c-4180-a4f8-2d57bd744a1b" />
 
 ---
 
