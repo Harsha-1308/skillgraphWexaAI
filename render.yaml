@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: skillgraph-api
+    env: python
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: COGNODB_URI
+        sync: false
+      - key: COGNODB_USERNAME
+        sync: false
+      - key: COGNODB_PASSWORD
+        sync: false
+      - key: CORS_ORIGINS
+        value: "https://skillgraph.vercel.app"
